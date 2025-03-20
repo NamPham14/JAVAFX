@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="605.0" prefWidth="668.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.hsf302.spring.javafx01.AgentController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" alignment="TOP_LEFT" prefHeight="54.0" prefWidth="620.0" text="Danh Sach Dai Ly">
+      <font>
+         <Font name="Berlin Sans FB" size="24.0" />
+      </font></Label>
+   <GridPane prefHeight="345.0" prefWidth="628.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.39996337890625" minWidth="10.0" prefWidth="174.79998779296875" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.20001220703125" minWidth="10.0" prefWidth="453.20001220703125" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="126.19999389648437" minHeight="10.0" prefHeight="47.20001220703125" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="161.79998626708982" minHeight="0.0" prefHeight="58.399987792968744" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="433.60000762939455" minHeight="10.0" prefHeight="54.79999999999998" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="433.60000762939455" minHeight="10.0" prefHeight="63.599999999999994" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Label prefHeight="18.0" prefWidth="297.0" text="Tai Khoan" />
+         <Label prefHeight="18.0" prefWidth="302.0" text="Dai Ly:" GridPane.rowIndex="1" />
+         <Label prefHeight="18.0" prefWidth="299.0" text="Trang Thai:" GridPane.rowIndex="2" />
+         <TextField fx:id="ftEmail" promptText="Enter Tai Khoan" GridPane.columnIndex="1" />
+         <TextField fx:id="ftAgent" promptText="Enter Dai Ly" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <TextField fx:id="ftStatus" promptText="Trang Thai" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Button fx:id="btSearch" onAction="#onButtonClick" mnemonicParsing="false" prefHeight="26.0" prefWidth="430.0" text="Tim Kiem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      </children>
+   </GridPane>
+   <TableView fx:id="TableviewAgent" prefHeight="428.0" prefWidth="628.0">
+     <columns>
+       <TableColumn prefWidth="75.0" text="STT" />
+       <TableColumn prefWidth="75.0" text="Email" />
+     </columns>
+   </TableView>
+</VBox>
